@@ -6,7 +6,7 @@
 ## How-to
 **Clone** this repo
 
-**'Run:**
+**Run:**
 ```
 streamlit run main.py
 ```
@@ -16,10 +16,8 @@ Screenshot:
 
 ## Add your own tokenizer
 You need a class to inherit from this project's base **Tokenizer** class.
-
 Let's do this with replacing **MyTokenizer** class with a pretrained Bert tokenizer.
-
-Replace this part of code:
+So edit the **main.py** and replace this part of code:
 ```
 class MyTokenizer(Tokenizer):
     def __init__(self):
@@ -53,3 +51,4 @@ gramify = Gramify(
 )
 ```
 
+Happy Digesting Data!
