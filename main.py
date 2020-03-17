@@ -25,7 +25,7 @@ gramify = Gramify(
 all_grams = gramify.gramify(int(nofgrams))
 
 word = st.text_input('Enter your word', 'off')
-num_to_plot = st.number_input(f'No of most recurrnt {nofgrams} to plot', 5,100,10)
+num_to_plot = st.number_input(f'No of most recurrnt {nofgrams}grams to plot', 5,100,10)
 if word in all_grams.keys():
     # st.write(str(all_grams[word]))
     word_cnts = gramify.get_word_cooccur(all_grams, word)
