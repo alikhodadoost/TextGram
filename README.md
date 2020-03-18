@@ -17,6 +17,7 @@ Screenshot:
 ## Add your own tokenizer
 You need a class to inherit from this project's base **Tokenizer** class.
 Let's do this with replacing **MyTokenizer** class with a pretrained Bert tokenizer.
+
 So edit the **main.py** and replace this part of code:
 ```
 class MyTokenizer(Tokenizer):
@@ -31,7 +32,7 @@ gramify = Gramify(
     tokenizer = MyTokenizer
 )
 ```
-With this
+With this:
 ```
 import torch
 from transformers import BertTokenizer
