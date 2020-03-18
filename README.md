@@ -37,13 +37,12 @@ With this:
 import torch
 from transformers import BertTokenizer
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-
 class MyTokenizer(Tokenizer):
     def __init__(self):
         super(MyTokenizer).__init__()
+        self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     def tokenize(text: str):
-        return tokenizer.tokenize(text)
+        return self.tokenizer.tokenize(text)
 
 sentences = read_file(filepath)
 gramify = Gramify(
